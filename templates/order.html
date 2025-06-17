@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block order %}
+<div class="order-form">
+  <!-- {% include 'navbar.html' %} -->
+  <div class="order-banner">
+  </div>
+  <h1>Order Form</h1>
+  <form action="/order" method="post">
+    <input type="text", placeholder="Contact Name" name="fullname" required>
+    <input type="number", placeholder="Quantity-in-number" name="quantity" required>
+    <input type="text", placeholder="Delivery Address" name="address" required>
+    <input type="number", placeholder="Contact Number" name="contact" required>
+    <textarea name="message" id="message" placeholder="More order specification(s)"></textarea>
+    <input type="submit" id="submit" class="order-btn" value="Place Order">
+  </form>
+</div>
+{% endblock %}
